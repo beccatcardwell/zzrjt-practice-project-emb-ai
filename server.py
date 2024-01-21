@@ -15,9 +15,14 @@ def sent_analyzer():
         score for the provided text.
     '''
     input_text = request.args.get('textToAnalyze')
+
+    if input_text == '':
+        return 'Text input is empty, please enter text'
+
     sentiment_result = sentiment_analyzer(input_text)
     label = sentiment_result['label']
     score = sentiment_result['score']
+
     if label is None or score is None:
         return 'Invalid input ! Try again.'
 
