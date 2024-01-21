@@ -1,3 +1,4 @@
+'''Sentiment analysis module'''
 import json
 import requests
 
