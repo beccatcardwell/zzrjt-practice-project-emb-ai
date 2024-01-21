@@ -3,7 +3,7 @@
     localhost:5000.
 '''
 from flask import Flask, render_template, request
-from SentimentAnalysis.sentiment_analysis import sentiment_analyzer
+from sentiment_analysis.sentiment_analysis import sentiment_analyzer
 
 app = Flask('Sentiment Analyzer')
 
