@@ -18,9 +18,9 @@ def sent_analyzer():
     sentiment_result = sentiment_analyzer(input_text)
     label = sentiment_result['label']
     score = sentiment_result['score']
-    if label is None or score is None: 
-        return f'Invalid input ! Try again.'
-    
+    if label is None or score is None:
+        return 'Invalid input ! Try again.'
+
     return f'The given text has been identified as {label.split("_")[1]} with a score of {score}.'
 
 @app.route("/")
