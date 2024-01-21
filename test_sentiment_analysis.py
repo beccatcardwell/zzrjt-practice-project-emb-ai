@@ -3,7 +3,9 @@ import unittest
 from sentiment_analysis.sentiment_analysis import sentiment_analyzer
 
 class TestSentimentAnalyzer(unittest.TestCase):
+    '''Test sentiment analyzer'''
     def test_sentiment_analyzer(self):
+        ''''Test positive, negative, and neutral results'''
         result_1 = sentiment_analyzer('I love working with Python')
         self.assertEqual(result_1['label'], 'SENT_POSITIVE')
         result_2 = sentiment_analyzer('I hate working with Python')
